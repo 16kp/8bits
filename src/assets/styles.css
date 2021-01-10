@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+.App {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.header-content {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.body-content {
+
+}
+
+.padding {
+    padding: 20px;
+}
+
+.font {
+    font-family: 'Inter';
+}
+
+.mover {
+    display: inline-block;
+    animation: rotation 1s infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(30deg);
+        transform-origin: bottom right;
+    }
+
+    50% {
+        transform: rotate(-15deg);
+        transform-origin: bottom right;
+    }
+
+    100% {
+        transform: rotate(30deg);
+        transform-origin: bottom right;
+    }
+}
