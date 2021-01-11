@@ -1,6 +1,8 @@
+import HELLOWS from '../utils/Contants';
 var React = require('react');
 
-function Body() {
+
+export default function Body() {
     return (
         <div className="padding body-content font">
             Hej, I'm Krishna!
@@ -19,5 +21,3 @@ function Body() {
         </div>
     );
 }
-
-export default Body;
