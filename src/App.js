@@ -5,7 +5,7 @@ import Header from './container/Header';
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App padding">
 			<Header/>
 			<Body/>
 			<Footer/>

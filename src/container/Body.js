@@ -4,7 +4,7 @@ var React = require('react');
 
 export default function Body() {
     return (
-        <div className="padding body-content font">
+        <div className="body-content font">
             Hej, I'm Krishna!
             <br/><br/>
             
