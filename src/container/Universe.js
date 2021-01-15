@@ -1,5 +1,5 @@
+import * as Renderer from '../utils/Renderer.js';
 var react = require('react');
-const fs = require('fs');
 
 export default function Universe() {
     return(
@@ -7,22 +7,22 @@ export default function Universe() {
             <div className="font header-content">
                 My own curiosity rover🚀
             </div>
-            {/* TODO : add the list of all files in universe directory here, 
-            for some reason, fs doesn't seem to work */}
+            <div>
+                <ul>
+                    {Renderer.getFileLinks().map((file) => <li key={file}>{file}</li>)}
+                </ul>
+            </div>
         </div>
     );  
 };
 
-
-function getAllFiles(dir_path) {
-    var allFiles = [];
-    fs.readdir(dir_path, (err, files) => {
-        files.forEach(file => allFiles.push(file))
+function getAllFiles() {
+    var files = [];
+    const markdownContext = require.context('../universe', false, /\.md$/);
+    
+    markdownContext.keys().map(file => {
+        files.push('../universe/' + file.substr(2))
     });
 
-    const listItems = allFiles.map((file) =>
-        <li>{file}</li>
-    );
-
-    return (<ul>{listItems}</ul>);
+    return files;
 }

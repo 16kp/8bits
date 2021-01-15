@@ -1,1 +1,2 @@
-# A Universe (of sorts)
+# What are monads anyway?
+> Monads are extensions.
