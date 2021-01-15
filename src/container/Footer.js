@@ -4,30 +4,15 @@ import LinkedIn from '@material-ui/icons/LinkedIn';
 import Github from '@material-ui/icons/GitHub';
 import Flare from '@material-ui/icons/Flare';
 import Instagram from '@material-ui/icons/Instagram';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom';
-import Universe from '../universe/Universe';
 var React = require('react');
 
-function Footer() {
+export default function Footer() {
     return (
-        <Router>
         <div>
             <Grid container spacing={1}>
-                <Grid item xs={1} align="center">
-                    <Link to="/universe">sf</Link>
-                </Grid>
-
-                <Grid item xs={2} align="center">
-                    <a href="" className="footer-link">
-                        <Link to="/universe">
-                            <Flare/>
-                        </Link>
-                        
-                        <Switch>
-                            <Route path='/universe'>
-                                <Universe/>
-                            </Route>
-                        </Switch>
+                <Grid item xs={3} align="center">
+                    <a href="/universe" className="footer-link">
+                        <Flare/>
                     </a>                    
                 </Grid>
                 <Grid item xs={3} align="center">
@@ -41,14 +26,11 @@ function Footer() {
                     </a>
                 </Grid>
                 <Grid item xs={3} align="center">
-                    <a href="https://www.instagram.com/whykrishna/" calssName="footer-link" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/whykrishna/" className="footer-link" target="_blank" rel="noopener noreferrer">
                         <Instagram/>
                     </a>
                 </Grid>
             </Grid>
         </div>
-        </Router>
     );
 }
-
-export default Footer;
